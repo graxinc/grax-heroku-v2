@@ -1,0 +1,35 @@
+{
+  "name": "GRAX",
+  "description": "GRAX Backup, Archive, and Restore for Salesforce",
+  "repository": "https://github.com/csquared/grax-heroku-v2.git",
+  "website": "https://grax.com",
+  "keywords": ["grax", "grax.com", "salesforce", "S3"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-inline"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "./bin/post-deploy.sh"
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "as": "DATABASE"
+    },
+    {
+      "plan": "grax",
+      "as": "GRAX"
+    },
+    {
+      "plan": "bucketeer",
+      "as": "S3"
+    }
+  ],
+  "env": {
+    "SECRET_STORE_BASE": {
+      "required": true,
+      "generator": "secret"
+    }
+  }
+}
