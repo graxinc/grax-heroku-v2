@@ -1,7 +1,7 @@
 {
   "name": "GRAX",
   "description": "GRAX Backup, Archive, and Restore for Salesforce",
-  "repository": "https://github.com/csquared/grax-heroku-v2.git",
+  "repository": "https://github.com/graxinc/grax-heroku-v2.git",
   "website": "https://grax.com",
   "keywords": ["grax", "grax.com", "salesforce", "S3"],
   "buildpacks": [
