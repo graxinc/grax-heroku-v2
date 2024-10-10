@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+cd "$1" # build dir
+
+curl -Ln -o go.zip https://hq.grax.com/api/v2/download/graxinc/grax/main/
+unzip -o go.zip
+rm -f go.zip
+chmod +x grax graxctl
