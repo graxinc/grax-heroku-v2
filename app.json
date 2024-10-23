@@ -18,7 +18,7 @@
       "as": "DATABASE"
     },
     {
-      "plan": "grax",
+      "plan": "grax-staging",
       "as": "GRAX"
     },
     {
