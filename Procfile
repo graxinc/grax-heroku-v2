@@ -1,1 +1,1 @@
-web: ./bin/grax.sh
+web: ./grax
